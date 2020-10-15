@@ -1,8 +1,8 @@
-import { Entity, Column, PrimaryColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('orphanages')
 export default class Orphanage {
-  @PrimaryColumn('increment')
+  @PrimaryGeneratedColumn('increment')
   id: number;
 
   @Column()
