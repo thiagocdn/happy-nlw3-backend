@@ -1,10 +1,13 @@
 import express from 'express';
 
-const app = express();
+import './database/connection'
 
-app.get('/users', (req, res) => {
-  console.log('Test');
-  return res.send('Hello World')
+const app = express();
+app.use(express.json())
+
+app.post('/users', (request, response) => {
+  
+  return response.send('Hello World')
 });
 
 app.listen(3333);
